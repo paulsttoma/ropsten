@@ -1,22 +1,33 @@
-import logo from './logo.svg';
+import Web3 from 'web3';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+
+  const [addr, setAddr] = useState('')
+
+  if(window.ethereum){
+
+    window.web3 = new Web3(window.ethereum)
+    window.ethereum.enable()
+    window.ethereum.on('accountsChanged', function (accounts){
+      setAddr(accounts[0])
+
+    })
+    
+  }
+  else if (window.web3){
+    window.web3 = new Web3(window.web3.currentProvider)
+  }
+    else{
+      window.alert("need eth")
+    }
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p> Your metamask wallet: {addr} </p>
       </header>
     </div>
   );
