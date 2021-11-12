@@ -6,6 +6,8 @@ function App() {
 
   const [addr, setAddr] = useState('')
 
+  function metamask(){
+
   if(window.ethereum){
 
     window.web3 = new Web3(window.ethereum)
@@ -22,12 +24,13 @@ function App() {
     else{
       window.alert("need eth")
     }
-
+  }
 
   return (
     <div className="App">
       <header className="App-header">
         <p> Your metamask wallet: {addr} </p>
+        <button onClick={metamask}>Connect MetaMask</button>
       </header>
     </div>
   );
