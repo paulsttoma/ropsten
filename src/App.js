@@ -70,9 +70,6 @@ function App() {
     console.log(contract);
 
   }
-
-
-
   
   function metamask(){
 
