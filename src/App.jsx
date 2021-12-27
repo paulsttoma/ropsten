@@ -16,7 +16,7 @@ function App() {
     } else if (window.web3) {
       window.web3 = new Web3(window.web3.currentProvider);
     } else {
-      window.alert("need eth");
+      window.alert("Download Metamask using google chrome extension");
     }
   }
 
@@ -502,6 +502,7 @@ function App() {
 
     const address = "0x340098DeC17eBD3712A79C4544e51Ff9e3f83525";
     const contract = new web3.eth.Contract(abi, address);
+    window.ethereum.enable();
 
     //contract.methods.name().call().then(name => console.log(name));
     //contract.methods.totalSupply().call().then(name => console.log(name));
