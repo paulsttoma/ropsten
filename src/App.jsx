@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
+import img1 from "./images/imageA.png";
+
 import NavigationBar from "./components/NavigationBar";
 
 function App() {
@@ -516,6 +518,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p> Your metamask wallet: {addr} </p>
+        <img src={img1} alt="Logo" />
         <button onClick={metamask}>Connect MetaMask</button>
         <button onClick={safeMint}>Mint</button>
         <NavigationBar />
