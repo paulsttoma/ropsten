@@ -503,7 +503,7 @@ function App() {
       }
     ];
 
-    const address = "0x706194Aaa7Ff861BfAC00587F2cCA0141625796C";
+    const address = "0x95B26055cc9488e072b15F33596f7DadbFaBA77a";
     const contract = new web3.eth.Contract(abi, address);
     window.ethereum.enable();
 
@@ -517,7 +517,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p> Your metamask wallet - polygon: {addr} </p>
+        <p> Your metamask wallet - rinkeby: {addr} </p>
         <button onClick={metamask}>Connect MetaMask</button>
         <button onClick={safeMint}>Mint</button>
         <img src={img1} alt="Logo" />
