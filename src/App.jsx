@@ -517,7 +517,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p> Your metamask wallet: {addr} </p>
+        <p> Your metamask wallet - polygon: {addr} </p>
         <button onClick={metamask}>Connect MetaMask</button>
         <button onClick={safeMint}>Mint</button>
         <img src={img1} alt="Logo" />
