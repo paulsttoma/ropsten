@@ -503,7 +503,7 @@ function App() {
       }
     ];
 
-    const address = "0x95B26055cc9488e072b15F33596f7DadbFaBA77a";
+    const address = "0xe494889A51fBa144C14C90D85c54669207dcE74c";
     const contract = new web3.eth.Contract(abi, address);
     window.ethereum.enable();
 
